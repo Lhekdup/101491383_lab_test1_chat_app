@@ -1,0 +1,20 @@
+<h2>Select Room</h2>
+
+<select id="room">
+    <option value="devops">DevOps</option>
+    <option value="cloud">Cloud Computing</option>
+    <option value="covid19">Covid19</option>
+    <option value="sports">Sports</option>
+    <option value="nodeJS">NodeJS</option>
+</select>
+
+<button onclick="joinRoom()">Join Room</button>
+
+<script>
+function joinRoom() {
+    const selectedRoom = document.getElementById("room").value;
+
+    localStorage.setItem("room", selectedRoom);
+    window.location = "chat.html";
+}
+</script>

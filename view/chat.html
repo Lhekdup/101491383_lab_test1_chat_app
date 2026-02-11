@@ -1,0 +1,35 @@
+<script src="/socket.io/socket.io.js"></script>
+<button onclick="logout()">Logout</button>
+
+<script>
+const socket = io();
+
+const username = localStorage.getItem("username");
+const room = localStorage.getItem("room");
+
+socket.emit('joinRoom', room);
+
+function sendMessage() {
+    const msg = document.getElementById("msg").value;
+
+    socket.emit('chatMessage', {
+        username,
+        room,
+        message: msg
+    });
+}
+
+socket.on('message', (data) => {
+    console.log(data);
+});
+
+document.getElementById("msg").addEventListener("input", () => {
+    socket.emit('typing', { username, room });
+});
+
+function logout() {
+    localStorage.clear();
+    socket.disconnect();
+    window.location = "login.html";
+}
+</script>
