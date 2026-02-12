@@ -36,16 +36,23 @@ The application allows users to:
 
 - DATABASE SCHEMA
 - Stores registered user information: userbname, first name and last name
+![Login Page](images/MongoDBStorage.png)
 
 - GROUP MESSAGE SCHEMA
 - Store room based chat messages
+![Login Page](images/chat.png)
 
 - SIGN UP
 - username and must be unique and data is stored in mongoDB.
+![Login Page](images/signup.png)
+![Login Page](images/users.png)
 
 - LOGIN
 - on successful login, user credentials are saved in local storage and redirects to room selection
 ![Login Page](images/login.png)
+![Login Page](images/room.png)
+
+
 - TYPING INDICATOR
 - when the user types, the other user sees the usrname is typing....
 
