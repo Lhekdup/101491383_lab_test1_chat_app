@@ -45,7 +45,7 @@ The application allows users to:
 
 - LOGIN
 - on successful login, user credentials are saved in local storage and redirects to room selection
-
+![alt text](room.png)
 - TYPING INDICATOR
 - when the user types, the other user sees the usrname is typing....
 
